@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
     <title>JavaScript Quiz</title>
 
     <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 
 <body>
-    <div class="scores"><a href=highscores.html">View Highscores</a></div>
+    <div class="scores"><a href='highscores.html'>View Highscores</a></div>
+    <img src="./assets/img/JavaScript-logo.png" class="rounded mx-auto d-block javascript-logo" alt="the javascript logo">
 
     <div class="timer">Time: <span id="time">0</span></div>
 
     <div class="container">
         <div id="start-screen" class="start">
-            <h1>JavaScript Challenge Quiz</h1>
-            <p> 
-                Get as many correct answers within the time limit! Incorrect answers will reduce your remaining
-            t   ime by 15 seconds. Answer quickly AND accurately. Good luck!
+            <h1 class="card-title custom-title">JavaScript Challenge Quiz</h1>
+            <p class="card-body custom-body"> 
+                Answer all questions within the time limit!<br> <span class="warning">WARNING!</span> <br>Incorrect answers will reduce your remaining
+            time by 15 seconds. Answer quickly AND accurately. Good luck!
             </p>
 
             <button id="start-button">Begin Quiz</button>
@@ -42,9 +50,6 @@
 
         <div id="feedback" class="feedback hide"></div>
     </div>
-
-
-
 
 
     <script src="./assets/js/questions.js"></script>
