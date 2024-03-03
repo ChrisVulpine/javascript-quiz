@@ -32,25 +32,35 @@ body {
     width: 7%;
     height: 7%;
     box-shadow: #F0DB4F 0 0 90px 7px;
+    padding-top: 2px;
+  }
+
+  p {
+    color: white;
   }
   
   a {
     color: black;
-    text-decoration: none;
-    transition: color 0.1s;
-    background-color: #F0DB4F;
-    border-radius: 7px;
-    padding: 4px;
-    border: dashed 2px black;
     font-family: anta;
+    text-decoration: none;
   }
-  
+
   a:hover {
-    color: #F0DB4F;
-    background-color: black;
-    border: dashed 2px #F0DB4F;
-    transition: all 0.2s ease-in-out
+    color:#F0DB4F
+
   }
+
+  h2{
+    color: white; 
+    text-align: center;
+    font-family: anta;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid rgba(118, 116, 116, 0.487);
+    background-color: rgba(123, 41, 156, 0.196);
+  }
+
   
   button {
     display: inline-block;
@@ -74,8 +84,10 @@ body {
     
   }
   
-  .choices button {
-    display: block;
+  .choices {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
   }
   
   input[type="text"] {
@@ -86,15 +98,23 @@ body {
     padding-left: 0px;
     max-height: 400px;
     overflow: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid rgba(118, 116, 116, 0.487);
+    background-color: rgba(123, 41, 156, 0.196);
   }
   
   li {
     padding: 5px;
     list-style: decimal inside none;
+    border: 1px solid rgba(118, 116, 116, 0.487);
   }
   
   li:nth-child(odd) {
-    background-color: #f3edfc;
+    background-color: #f0da4f;
+    color: black;
+    border: 1px solid rgba(118, 116, 116, 0.487);
   }
   
   .container {
@@ -111,10 +131,28 @@ body {
   }
   
   .scores {
-    position: flex;
+    display: inline-block;
     top: 10px;
     left: 10px;
     padding: 7px;
+    margin-top: 7px;
+    margin-left: 5px;
+    text-decoration: none;
+    transition: color 0.1s;
+    background-color: #F0DB4F;
+    border-radius: 7px;
+    padding: 4px;
+    border: dashed 2px black;
+    text-decoration: none;
+  }
+
+    
+  .scores:hover {
+    color: #F0DB4F;
+    background-color: black;
+    border: dashed 2px #F0DB4F;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
   }
   
   .feedback {
@@ -133,4 +171,34 @@ body {
     color: white; 
     font-family: "kode mono";
   }
-  
+
+  .wrapper {
+    color: white; 
+
+  }
+
+  .highscores {
+    color: white; 
+    display:flex; 
+    justify-content: center;
+    font-family: anta;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid rgba(118, 116, 116, 0.487);
+    background-color: rgba(123, 41, 156, 0.196);
+  }
+
+  #end-screen {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid rgba(118, 116, 116, 0.487);
+    background-color: rgba(123, 41, 156, 0.196);
+  }
+
+  #final-score {
+    font-family: anta;
+    color:#F0DB4F;
+    font-weight: bold;
+  }

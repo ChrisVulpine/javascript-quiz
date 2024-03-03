@@ -73,6 +73,7 @@ function beginQuiz() {
   var startScreenVar = document.getElementById('start-screen');
   startScreenVar.setAttribute('class', 'hide'); //How do I hide an element in JS? Use a CSS class set to display: none
 
+  sfxStart.play();
 
   // un-hide questions section
   questionsVar.removeAttribute('class'); //How do I remove a CSS class using JS? .removeAttribute
@@ -191,6 +192,8 @@ function clockTick() {
     function quizEnd() {
       // stop timer
       clearInterval(timerId);
+
+      sfxVictory.play();
     
       // show end screen
       var endScreenEl = document.getElementById('end-screen');
@@ -239,18 +242,6 @@ function checkForEnter(event) {
     saveHighscore();
   }
 }
-
-    
-
-
-
-
-
-
-
-
-
-
 
 
 
