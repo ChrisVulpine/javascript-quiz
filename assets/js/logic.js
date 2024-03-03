@@ -45,6 +45,7 @@ var timerId;
 var beginVar = document.getElementById('start-button');
 var timerVar = document.getElementById('time');
 var resultVar = document.getElementById('feedback');
+var penaltyVar = document.getElementById('penalty');
 var questionsVar = document.getElementById('questions');
 var choicesVar = document.getElementById('choices');
 var submitVar = document.getElementById('submit');
@@ -159,8 +160,13 @@ function clockTick() {
         // play "wrong" sound effect
         sfxIncorrect.play();
 
+        
         resultVar.style.color = 'red';
+        penaltyVar.style.color = 'red'
+        penaltyVar.style.color = 'red'
         resultVar.textContent = 'Wrong!';
+        
+        
         
       } else {
         // play "right" sound effect
@@ -172,8 +178,10 @@ function clockTick() {
     
       // flash right/wrong feedback on page for half a second
       resultVar.setAttribute('class', 'feedback');
+      penaltyVar.setAttribute('class', 'penalty');
       setTimeout(function () {
         resultVar.setAttribute('class', 'feedback hide');
+        penaltyVar.setAttribute('class', 'feedback hide');
       }, 1000);
     
       // move to next question
