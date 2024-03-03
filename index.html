@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
     <title>JavaScript Quiz</title>
 
-    <link rel="icon" type="image/x-icon" href="./assets/img/JavaScript-logo.png">
+    <link rel="icon" type="favcon" href="./assets/img/JavaScript-logo.png">
 
     <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
@@ -27,6 +27,11 @@
     <div class="timer">Time: <span id="time">0</span></div>
     <div id="penalty" class="feedback hide">-15s</div>
 
+    
+
+    <button id="playbutton" onclick="playIntro()">▶</button>
+    <audio id="introSong" src="./assets/sfx/intro.mp3" hidden="true" autostart="false" loop="true"></audio>
+
     <div class="container">
         <div id="start-screen" class="start">
             <h1 class="card-title custom-title">JavaScript Challenge Quiz</h1>
@@ -35,7 +40,7 @@
             time by 15 seconds. Answer quickly AND accurately. Good luck!
             </p>
 
-            <button id="start-button">Begin Quiz</button>
+            <button class="start-button" id="start-button">Begin Quiz</button>
         </div>
 
         <div id="questions" class="hide">

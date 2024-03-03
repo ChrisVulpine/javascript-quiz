@@ -52,6 +52,7 @@ var submitVar = document.getElementById('submit');
 var initialsVar = document.getElementById('initials');
 
 
+
 //SFX
 
 var sfxCorrect = new Audio('assets/sfx/mycorrect.mp3');
@@ -64,6 +65,29 @@ var sfxVictory = new Audio('assets/sfx/victory.mp3');
 
 
 // MAIN FUNCTIONS 
+
+function playIntro() {
+  var introSong = document.getElementById('introSong');
+  var playButton = document.getElementById('playbutton');
+
+
+  if(introSong.paused) {
+    introSong.play();
+    playButton.textContent = '⏸'
+    playButton.classList.remove('id', 'playbutton');
+    playButton.setAttribute('class', 'buttonPlay');
+    playButton.classList.remove('class', 'buttonPause');
+    playButton.setAttribute('class', 'buttonPlay');
+
+  }
+  else {
+    introSong.pause();
+    playButton.textContent = '▶'
+    playButton.classList.remove('id', 'playbutton');
+    playButton.setAttribute('class', 'buttonPause');
+    playButton.classList.remove('class', 'buttonPlay');
+  }
+}
 
 
 // Begin Quiz Function // -----> This function needs to: hide the start page, reveal the first question, start the timer, show the timer.
@@ -165,6 +189,7 @@ function clockTick() {
         penaltyVar.style.color = 'red'
         penaltyVar.style.color = 'red'
         resultVar.textContent = 'Wrong!';
+        penaltyVar.setAttribute('class', 'penalty');
         
         
         
@@ -178,7 +203,7 @@ function clockTick() {
     
       // flash right/wrong feedback on page for half a second
       resultVar.setAttribute('class', 'feedback');
-      penaltyVar.setAttribute('class', 'penalty');
+      
       setTimeout(function () {
         resultVar.setAttribute('class', 'feedback hide');
         penaltyVar.setAttribute('class', 'feedback hide');

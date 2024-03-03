@@ -17,6 +17,66 @@ body {
     font-family: anta;
   }
 
+  #playbutton {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 100%;
+    background-color: #F0DB4F;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    border: dashed 2px black;
+    transition: background-color 0.1s;
+    font-family: anta;
+
+  }
+
+  .buttonPause {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 100%;
+  background-color: #F0DB4F;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  border: dashed 2px black;
+  transition: background-color 0.1s;
+  font-family: anta;
+  }
+  
+
+  .buttonPlay {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 100%;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #F0DB4F;
+    border: dashed 2px #F0DB4F;
+    transition: background-color 0.1s;
+    font-family: anta;
+
+  }
+
+  button {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 100%;
+    background-color: #F0DB4F;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    border: dashed 2px black;
+    transition: background-color 0.1s;
+    font-family: anta;
+    }
+    
+
   .warning {
     color: #F0DB4F;
     text-decoration: underline;
@@ -49,7 +109,6 @@ body {
 
   a:hover {
     color:#F0DB4F
-
   }
 
   h2{
@@ -64,7 +123,7 @@ body {
   }
 
   
-  button {
+  .start-button {
     display: inline-block;
     margin: 5px;
     cursor: pointer;
@@ -78,7 +137,7 @@ body {
     font-family: anta;
   }
   
-  button:hover {
+  .start-button:hover {
     background-color: #000000;
     color: #F0DB4F;
     border: dashed 2px #F0DB4F;
