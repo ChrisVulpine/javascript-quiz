@@ -83,7 +83,7 @@ function beginQuiz() {
   // show starting time
   timerVar.textContent = time;
 
-  getQuestion(); // <----- Next Variable to Work on
+  showQuestion(); // <----- Next Variable to Work on
 }
 
 // Timer Function
@@ -98,12 +98,174 @@ function clockTick() {
       quizEnd();
     }
   }
+
+  // showQuestion Function <----- This function needs to: get questions from questions.js file, display the correct question and choices,
+  //                               make sure there are no old choices or text elements showing, 
+
+  function showQuestion() {
+
+    var currentQuestion = questions [currentQuestionIndex];
+
+    var questionText = document.getElementById('question-title');
+
+    questionText.textContent = currentQuestion.title;
+
   
+    choicesVar.innerHTML = '';
+
+     // loop over choices
+  for (var i = 0; i < currentQuestion.choices.length; i++) {
+
+    // create new button for each choice
+    var choice = currentQuestion.choices[i];
+    var choiceNode = document.createElement('button');
+    choiceNode.setAttribute('class', 'choice');
+    choiceNode.setAttribute('value', choice);
+
+    choiceNode.textContent = i + 1 + '. ' + choice;
+
+    // display on the page
+    choicesVar.appendChild(choiceNode);
+  }
+
+
+  }
+  
+  // answerChoice Function <----- this function needs to handle what happens when I choice button is clicked, decide if the answer is correct, and proceed
+      //                          to the next questions, 
+
+  function answerChoice(event) { 
+    
+      var buttonEl = event.target;
+    
+      // if the clicked element is not a choice button, do nothing.
+      if (!buttonEl.matches('.choice')) {
+        return;
+      }
+    
+      // check if user guessed wrong
+      if (buttonEl.value !== questions[currentQuestionIndex].answer) {
+        // penalize time
+        time -= 15;
+    
+        if (time < 0) {
+          time = 0;
+        }
+    
+        // display new time on page
+        timerVar.textContent = time;
+    
+        // play "wrong" sound effect
+        sfxIncorrect.play();
+
+        resultVar.style.color = 'red';
+        resultVar.textContent = 'Wrong!';
+        
+      } else {
+        // play "right" sound effect
+        sfxCorrect.play();
+
+        resultVar.style.color = 'green';
+        resultVar.textContent = 'Correct!';
+      }
+    
+      // flash right/wrong feedback on page for half a second
+      resultVar.setAttribute('class', 'feedback');
+      setTimeout(function () {
+        resultVar.setAttribute('class', 'feedback hide');
+      }, 1000);
+    
+      // move to next question
+      currentQuestionIndex++;
+    
+      // check if we've run out of questions
+      if (time <= 0 || currentQuestionIndex === questions.length) {
+        quizEnd();
+      } else {
+        showQuestion();
+      }
+    }
+    
+    //_________________________________________________
+    
+    function quizEnd() {
+      // stop timer
+      clearInterval(timerId);
+    
+      // show end screen
+      var endScreenEl = document.getElementById('end-screen');
+      endScreenEl.removeAttribute('class');
+    
+      // show final score
+      var finalScoreEl = document.getElementById('final-score');
+      finalScoreEl.textContent = time;
+    
+      // hide questions section
+      questionsVar.setAttribute('class', 'hide');
+    }
+
+
+
+function saveHighscore() {
+  // get value of input box
+  var initials = initialsVar.value.trim();
+
+  // make sure value wasn't empty
+  if (initials !== '') {
+    // get saved scores from localstorage, or if not any, set to empty array
+    var highscores =
+      JSON.parse(window.localStorage.getItem('highscores')) || [];
+
+    // format new score object for current user
+    var newScore = {
+      score: time,
+      initials: initials,
+    };
+
+    // save to localstorage
+    highscores.push(newScore);
+    window.localStorage.setItem('highscores', JSON.stringify(highscores));
+
+    // redirect to next page
+    window.location.href = 'highscores.html';
+  }
+}
+
+//_________________________________________________
+
+function checkForEnter(event) {
+  // "13" represents the enter key
+  if (event.key === 'Enter') {
+    saveHighscore();
+  }
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 // start quiz
 beginVar.onclick = beginQuiz;
+
+// click on choice
+choicesVar.onclick = answerChoice;
+
+submitVar.onclick = saveHighscore;
+
+initialsVar.onkeyup = checkForEnter;
 
 
 
