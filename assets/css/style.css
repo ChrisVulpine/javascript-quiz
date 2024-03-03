@@ -59,10 +59,9 @@ body {
     border: dashed 2px #F0DB4F;
     transition: background-color 0.1s;
     font-family: anta;
-
   }
 
-  button {
+  .choice {
     display: inline-block;
     margin: 5px;
     cursor: pointer;
@@ -75,6 +74,48 @@ body {
     transition: background-color 0.1s;
     font-family: anta;
     }
+
+    #submit {
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 100%;
+      background-color: #F0DB4F;
+      border-radius: 5px;
+      padding: 5px 10px;
+      color: black;
+      border: dashed 2px black;
+      transition: background-color 0.1s;
+      font-family: anta;
+      }
+
+      .goBackbtn {
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 100%;
+      background-color: #F0DB4F;
+      border-radius: 5px;
+      padding: 5px 10px;
+      color: black;
+      border: dashed 2px black;
+      transition: background-color 0.1s;
+      font-family: anta;
+      }
+
+      #clear {
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 100%;
+      background-color: #F0DB4F;
+      border-radius: 5px;
+      padding: 5px 10px;
+      color: black;
+      border: dashed 2px black;
+      transition: background-color 0.1s;
+      font-family: anta;
+      }
     
 
   .warning {

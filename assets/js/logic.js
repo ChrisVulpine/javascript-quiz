@@ -74,18 +74,17 @@ function playIntro() {
   if(introSong.paused) {
     introSong.play();
     playButton.textContent = '⏸'
-    playButton.classList.remove('id', 'playbutton');
+    
     playButton.setAttribute('class', 'buttonPlay');
     playButton.classList.remove('class', 'buttonPause');
-    playButton.setAttribute('class', 'buttonPlay');
 
   }
   else {
     introSong.pause();
     playButton.textContent = '▶'
-    playButton.classList.remove('id', 'playbutton');
-    playButton.setAttribute('class', 'buttonPause');
+
     playButton.classList.remove('class', 'buttonPlay');
+    playButton.setAttribute('class', 'buttonPause');
   }
 }
 
