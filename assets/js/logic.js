@@ -66,6 +66,9 @@ var sfxVictory = new Audio('assets/sfx/victory.mp3');
 
 // MAIN FUNCTIONS 
 
+let music = document.getElementById("introSong");
+music.volume = .1;
+
 function playIntro() {
   var introSong = document.getElementById('introSong');
   var playButton = document.getElementById('playbutton');
@@ -220,12 +223,32 @@ function clockTick() {
     }
     
     //_________________________________________________
+
+
     
     function quizEnd() {
+      var playButton = document.getElementById('playbutton');
+      playButton.textContent = '▶'
+
+      playButton.setAttribute('class', 'buttonPlay');
+      playButton.classList.remove('class', 'buttonPause');
+
+      introSong.pause();
+
+      let vMusic = document.getElementById("victorySong");
+
       // stop timer
       clearInterval(timerId);
 
-      sfxVictory.play();
+      vMusic.volume = 0.2;
+      vMusic.play();
+
+  
+    vMusic.addEventListener('ended', function() {
+    vMusic.pause();
+    vMusic.currentTime = 0;
+    });
+
     
       // show end screen
       var endScreenEl = document.getElementById('end-screen');
