@@ -161,7 +161,6 @@ body {
     margin-top: 20px;
     padding-top: 10px;
     color: gray;
-    border-top: 2px solid #ccc;
   }
   
   .timer {
@@ -201,4 +200,36 @@ body {
     font-family: anta;
     color:#F0DB4F;
     font-weight: bold;
+  }
+
+  .result-score {
+    font-family: anta;
+    
+  }
+
+  #feedback {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.907);
+    border-radius: 7px;
+    font-family: anta;
+    text-align: center;
+    z-index: 1000;
+    animation: fadeOut 1s ease forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      font-size: 12px;
+    }
+    100% {
+      opacity: 0;
+      font-size: 25px;
+      display: none;
+
+    }
   }
