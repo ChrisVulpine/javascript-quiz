@@ -22,33 +22,32 @@
 
 <body>
 
+    <section class="scoreTimer-container">
+        <div class="scores"><a href='highscores.html'>View Highscores</a></div>
+        <div class="timer">Time: <span id="time">0</span></div>
+        <div id="penalty" class="feedback hide">-15s</div>
+    </section>
 
-<div class="playContainer">
-    <div class="scores"><a href='highscores.html'>View Highscores</a></div>
-    <div class="timer">Time: <span id="time">0</span></div>
-    <div id="penalty" class="feedback hide">-15s</div>
-</div>
+    <section class="playbutton">
+        <h1 id="bgmText" class="backgroundMusic">Background Music(optional):</h1>
+        <button id="playbutton" onclick="playIntro()">▶</button>
+        <audio id="introSong" src="./assets/sfx/intro.mp3" hidden="true" autostart="false" loop="true"></audio>
+    </section>
 
-<div class="playbtn">
-    <h1 id="bgmText" class="backgroundMusic">Background Music(optional):</h1>
-<button id="playbutton" onclick="playIntro()">▶</button>
-<audio id="introSong" src="./assets/sfx/intro.mp3" hidden="true" autostart="false" loop="true"></audio>
-</div>
+    <div class="logoContainer">
+        <img src="./assets/img/JavaScript-logo.png" id="JavaScript-logo" class="javaLogo" alt="the javascript logo">
+    </div>
 
+    <section class="container">
 
-
-<div class="logoContainer">
-<img src="./assets/img/JavaScript-logo.png" id="JavaScript-logo" class="javaLogo" alt="the javascript logo">
-</div>
-
-    <div class="container">
         <div id="start-screen" class="start">
-            <h1 class="card-title custom-title">JavaScript Challenge Quiz</h1>
+
+            <!-- Fix this if the two classes are not needed -->
+            <h1 class="card-title custom-title">JavaScript Challenge Quiz</h1> 
             <p class="card-body custom-body"> 
                 Answer all questions within the time limit!<br> <span class="warning">WARNING!</span> <br>Incorrect answers will reduce your remaining
-            time by 15 seconds. Answer quickly AND accurately. Good luck!
+                time by 15 seconds. Answer quickly AND accurately. Good luck!
             </p>
-
             <button class="start-button" id="start-button">Begin Quiz</button>
         </div>
 
@@ -61,15 +60,15 @@
 
         <div id="end-screen" class="hide">
             <h2>COMPLETE!</h2>
-        <p class="result-score">Score: <span id="final-score"></span></p>
-                <p>
-                Great work! Enter your initials: <input type="text" id="initials" maxlength="3"/>
+            <p class="result-score">Score: <span id="final-score"></span></p>
+
+            <p> Great work! Enter your initials: <input type="text" id="initials" maxlength="3">
                 <button id="submit">Submit</button>
             </p>
         </div>
 
         <div id="feedback" class="feedback hide"></div>
-    </div>
+    </section>
 
 
     <script src="./assets/js/questions.js"></script>
