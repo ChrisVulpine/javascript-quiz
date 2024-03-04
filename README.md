@@ -18,7 +18,7 @@ This project was meant to be played in the browser here: https://chrisvulpine.gi
 
 ## Usage
 
-The play simply needs to click the Begin Quiz button to start the quiz and timer. They can also click the Background Music button for some jams while they play, but this is optional. 
+The player simply needs to click the Begin Quiz button to start the quiz and timer. They can also click the Background Music button for some jams while they play, but this is optional. 
 
 ![alt text](assets/img/screenShot1.png)
 ![alt text](assets/img/screenShot2.png)
@@ -26,21 +26,21 @@ The play simply needs to click the Begin Quiz button to start the quiz and timer
 
 ## Credits
 
-For glow effect: https://www.codeinwp.com/snippets/css-glow-effect/#gref <br>
+* For glow effect: https://www.codeinwp.com/snippets/css-glow-effect/#gref <br>
 
-For easier css: bootstrap.com<br>
+* For easier css: https://www.bootstrap.com <br>
 
-General Reference: w3schools.com<br>
+* General Reference: https://www.w3schools.com <br>
 
-JavaScript Reference: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events<br>
+* JavaScript Reference: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events<br>
 
-SFX: https://www.myinstants.com/en/index/us/<br>
+* SFX: https://www.myinstants.com/en/index/us/<br>
 
-Flexbox Reference: https://forum.freecodecamp.org/t/css-flexbox-how-to-align-buttons-on-center/274433<br>
+* Flexbox Reference: https://forum.freecodecamp.org/t/css-flexbox-how-to-align-buttons-on-center/274433<br>
 
-Animation in CSS: https://www.w3schools.com/css/css3_animations.asp <br>
+* Animation in CSS: https://www.w3schools.com/css/css3_animations.asp <br>
 
-Creating a Gradient Background: https://www.youtube.com/watch?v=YA8ZciJa64k&t=104s&ab_channel=BroCode<br>
+* Creating a Gradient Background: https://www.youtube.com/watch?v=YA8ZciJa64k&t=104s&ab_channel=BroCode<br>
 
 
 
