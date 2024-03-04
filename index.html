@@ -21,16 +21,25 @@
 </head>
 
 <body>
-    <div class="scores"><a href='highscores.html'>View Highscores</a></div>
-    <img src="./assets/img/JavaScript-logo.png" class="rounded mx-auto d-block javascript-logo" alt="the javascript logo">
 
+
+<div class="playContainer">
+    <div class="scores"><a href='highscores.html'>View Highscores</a></div>
     <div class="timer">Time: <span id="time">0</span></div>
     <div id="penalty" class="feedback hide">-15s</div>
+</div>
 
-    
+<div class="playbtn">
+    <h1 id="bgmText" class="backgroundMusic">Background Music(optional):</h1>
+<button id="playbutton" onclick="playIntro()">▶</button>
+<audio id="introSong" src="./assets/sfx/intro.mp3" hidden="true" autostart="false" loop="true"></audio>
+</div>
 
-    <button id="playbutton" onclick="playIntro()">▶</button>
-    <audio id="introSong" src="./assets/sfx/intro.mp3" hidden="true" autostart="false" loop="true"></audio>
+
+
+<div class="logoContainer">
+<img src="./assets/img/JavaScript-logo.png" id="JavaScript-logo" class="javaLogo" alt="the javascript logo">
+</div>
 
     <div class="container">
         <div id="start-screen" class="start">

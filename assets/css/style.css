@@ -7,6 +7,40 @@ body {
 
   }
 
+  .playContainer {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: inherit;
+    padding: 10px;
+}
+
+.logoContainer {
+  display: flex; 
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.javaLogo {
+  max-width: 50px;
+  max-height: 50px;
+  box-shadow: #F0DB4F 0 0 90px 7px;
+}
+
+.backgroundMusic {
+  color: white;
+  font-family: anta; 
+  font-size: 15px;
+}
+
+.playbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
   .custom-title {
     border: 2px solid black;
     border-radius: 20px;
@@ -18,25 +52,23 @@ body {
   }
 
   #playbutton {
-    display: inline-block;
     margin: 5px;
     cursor: pointer;
     font-size: 100%;
     background-color: #F0DB4F;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 5px 10px;
     color: black;
     border: dashed 2px black;
-    transition: background-color 0.1s;
     font-family: anta;
+    max-width: 40px; 
+    max-height: 40px; 
 
   }
 
   .buttonPause {
   display: inline-block;
-  margin: 5px;
   cursor: pointer;
-  font-size: 100%;
   background-color: #F0DB4F;
   border-radius: 5px;
   padding: 5px 10px;
@@ -49,9 +81,7 @@ body {
 
   .buttonPlay {
     display: inline-block;
-    margin: 5px;
     cursor: pointer;
-    font-size: 100%;
     background-color: black;
     border-radius: 5px;
     padding: 5px 10px;
@@ -189,7 +219,7 @@ body {
   .choices {
     display: flex; 
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
   
   input[type="text"] {
@@ -220,7 +250,8 @@ body {
   }
   
   .container {
-    margin:  20px auto 0 auto;
+    display: flex;
+    margin:  10px auto 0 auto;
     max-width: 600px;
   }
   
@@ -266,7 +297,6 @@ body {
   }
   
   .timer {
-    position: absolute;
     top: 10px;
     right: 10px;
     color: white; 
@@ -297,16 +327,19 @@ body {
     border: 2px solid black;
     border-radius: 20px;
     padding: 15px;
+    margin-top: 10px;
     border: 1px solid rgba(118, 116, 116, 0.487);
     background-color: rgba(123, 41, 156, 0.196);
   }
 
   #end-screen {
+    margin: auto; 
     border: 2px solid black;
     border-radius: 20px;
     padding: 15px;
     border: 1px solid rgba(118, 116, 116, 0.487);
     background-color: rgba(123, 41, 156, 0.196);
+
   }
 
   #final-score {
@@ -316,12 +349,14 @@ body {
   }
 
   .result-score {
+    display: flex; 
+    justify-content: center;
     font-family: anta;
 
   }
 
   #feedback {
-    position: fixed;
+    position:fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

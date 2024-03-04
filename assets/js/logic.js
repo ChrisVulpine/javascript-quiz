@@ -50,6 +50,9 @@ var questionsVar = document.getElementById('questions');
 var choicesVar = document.getElementById('choices');
 var submitVar = document.getElementById('submit');
 var initialsVar = document.getElementById('initials');
+var javaLogo = document.getElementById('JavaScript-logo');
+var bgmVar = document.getElementById('bgmText');
+var playButton = document.getElementById('playbutton');
 
 
 
@@ -65,6 +68,9 @@ var sfxVictory = new Audio('assets/sfx/victory.mp3');
 
 
 // MAIN FUNCTIONS 
+
+
+// Background Music Control
 
 let music = document.getElementById("introSong");
 music.volume = .1;
@@ -99,6 +105,10 @@ function beginQuiz() {
       // hide start screen
   var startScreenVar = document.getElementById('start-screen');
   startScreenVar.setAttribute('class', 'hide'); //How do I hide an element in JS? Use a CSS class set to display: none
+  playButton.setAttribute('class', 'hide');
+  javaLogo.setAttribute('class', 'hide');
+  bgmVar.setAttribute('class', 'hide');
+
 
   sfxStart.play();
 
@@ -230,7 +240,7 @@ function clockTick() {
       var playButton = document.getElementById('playbutton');
       playButton.textContent = '▶'
 
-      playButton.setAttribute('class', 'buttonPlay');
+      playButton.setAttribute('class', 'hide');
       playButton.classList.remove('class', 'buttonPause');
 
       introSong.pause();
